@@ -88,7 +88,34 @@ def __dns_message_dict(serverip, field_vals):
         return 0
 
 def main():
+    #[('id', 35213), ('rdatatype', 255), ('ra', 0), ('ad', 0), ('z', 0), ('rd', 0), ('tc', 0), ('url', 'aetna.com'), ('edns', 1), ('qr', 0), ('opcode', 0), ('aa', 1), ('dnssec', 0), ('rdataclass', 1), ('cd', 0), ('rcode', 15), ('payload', 175)]
     
+    # one query example
+    field_vals = {
+        "id": 35213,
+        "rdatatype": 255,
+        "ra": 0,
+        "ad": 0,
+        "z": 0,
+        "rd": 0,
+        "tc": 0,
+        "url": "aetna.com",
+        "edns": 1,
+        "qr": 0,
+        "opcode": 0,
+        "aa": 1,
+        "dnssec": 0,
+        "rdataclass": 1,
+        "cd": 0,
+        "rcode": 15,
+        "payload": 175
+    }
+
+    # node-1 ip address
+    serverip = "172.16.117.2"
+
+    ampfactor = __dns_message_dict(serverip, field_vals)
+    print("serverip: %s, ampfactor: %f" %(serverip, ampfactor))
   
 if __name__== "__main__":
     main()
