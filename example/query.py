@@ -201,7 +201,7 @@ def main():
     # node-1 ip address
     serverip = "93.170.117.147"
 
-    ampfactor = __dns_message_dict(serverip, field_vals)
+    ampfactor = __dns_message_dict__(serverip, field_vals)
     print("serverip: %s, ampfactor: %f" %(serverip, ampfactor))
   
 if __name__== "__main__":
