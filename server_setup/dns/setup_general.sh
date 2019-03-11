@@ -44,6 +44,9 @@ sudo apt-get --assume-yes install python3-sqlalchemy
 sudo apt-get --assume-yes install python3-psycopg2
 sudo apt-get --assume-yes install python3-setuptools
 
+pip3 uninstall -y scapy
+sudo pip3 uninstall -y scapy
+
 sudo pip3 install --upgrade setuptools
 
 git clone https://github.com/secdev/scapy
